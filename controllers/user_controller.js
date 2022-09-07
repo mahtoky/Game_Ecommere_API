@@ -5,8 +5,10 @@ const findAllUsers = async (req, res) => {
 };
 
 const findUsersById = async (req, res) => {
+    const idUser = req.params.id;
+    console.log(idUser); 
     res.status(200).json({
-        description: 'An user who has the id $(req.params.id)'
+        description: 'An user who has the id ${req.params.id}'
     });
 };
 
